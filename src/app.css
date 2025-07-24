@@ -1,0 +1,61 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+:root {
+    --color-bg: #fbfbff;
+    --color-bg-dark: #121212;
+    --color-text: #121212;
+    --color-text-dark: #fbfbff;
+    --color-primary: #dea54b;
+    --color-blue: #33658a;
+    --color-green: #59c9a5;
+    --color-red: #ad343e;
+
+    --font-size-banner: 700%
+}
+
+body {
+    background-color: var(--color-bg);
+    font-family: 'Playfair Display', "Helvetica", serif;
+}
+
+nav {
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+
+    border-bottom: 0.5rem solid var(--color-green);
+}
+
+#banner {
+    border-bottom: 0.5rem solid var(--color-green);
+
+    background-color: var(--color-bg);
+    color: var(--color-text);
+
+    font-size: var(--font-size-banner);
+    font-family: 'Baskerville', serif;
+
+    padding-top: 7%;
+    padding-bottom: 8%;
+}
+
+#contacts {
+    padding: 4em;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.contact {
+    padding: 1rem 2rem 1rem 2rem;
+    margin: 0 7rem 0 7rem;
+
+    border-radius: 10px;
+
+    background-color: var(--color-primary);
+}
+
+.contact:hover {
+    background-color: var(--color-blue);
+    color: var(--color-text-dark);
+}
