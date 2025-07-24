@@ -13,11 +13,9 @@ const config = {
 		//precompress: false,
 		strict: true
 	}) },
-	paths: {
-		base: '',
-	},
 	preprocess: [mdsvex()],
-	extensions: ['.svelte', '.svx']
+	extensions: ['.svelte', '.svx'],
+	appDir: 'app',
 };
 
 export default config;
