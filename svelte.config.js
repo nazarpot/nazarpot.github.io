@@ -14,7 +14,7 @@ const config = {
 		strict: true
 	}) },
 	paths: {
-		base: '/nazarpot.github.io',
+		base: '',
 	},
 	preprocess: [mdsvex()],
 	extensions: ['.svelte', '.svx']
