@@ -9,12 +9,12 @@ const config = {
 	adapter: adapter({
 		pages: 'build',
 		assets: 'build',
-		fallback: undefined,
-		precompress: false,
+		fallback: 'index.html',
+		//precompress: false,
 		strict: true
 	}) },
 	paths: {
-		base: process.argv.includes('dev') ? '' : process.env.BASE_PATH,
+		base: '/nazarpot.github.io',
 	},
 	preprocess: [mdsvex()],
 	extensions: ['.svelte', '.svx']
