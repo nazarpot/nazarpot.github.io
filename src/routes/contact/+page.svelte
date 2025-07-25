@@ -66,12 +66,14 @@
         display: table-cell;
         margin-bottom: 1rem;
 
+        border: 1px solid black;
         border-radius: 10px;
     }
 
     textarea {
         display: table-cell;
 
+        border: 1px solid black;
         border-radius: 10px;
     }
 

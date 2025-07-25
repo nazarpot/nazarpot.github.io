@@ -1,8 +1,6 @@
 import { mdsvex } from 'mdsvex';
 import adapter from '@sveltejs/adapter-static';
 
-const dev = process.argv.includes('dev');
-
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: { // adapter-auto only supports some environments, see https://svelte.dev/docs/kit/adapter-auto for a list.
@@ -11,16 +9,16 @@ const config = {
 	adapter: adapter({
 		pages: 'build',
 		assets: 'build',
-		fallback: 'index.html',
-		paths: {
-			base: dev ? '' : process.env.BASE_PATH,
-		},
+		fallback: undefined,
 		//precompress: false,
 		strict: true
 	}) },
 	preprocess: [mdsvex()],
 	extensions: ['.svelte', '.svx'],
-	appDir: 'app',
+	//appDir: 'app',
+	paths: {
+		base: '',
+	},
 };
 
 export default config;
