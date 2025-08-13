@@ -1,3 +1,0 @@
-import"../chunks/DsnmJJEf.js";import"../chunks/JQxpw4wo.js";import{s as a,v as n,$ as t,w as r}from"../chunks/CcqVssL7.js";import{h as i}from"../chunks/B6_vtRoN.js";var m=a(`<div id="resume-download"><a id="resume-download-btn" href="/Resume.pdf" target="_blank" rel="noopener noreferrer">Download Resume</a></div> <div id="resume"><h3 class="text-xl underline">Summary</h3> <p>Passionate computer science graduate with experience in web and mobile development.
-        Proven ability to quickly learn new technologies and collaborate effectively in team environments.
-        Eager to contribute to beneficial and practical software solutions.</p></div>`,1);function u(e){var o=m();i(s=>{t.title="Resume"}),r(2),n(e,o)}export{u as component};
