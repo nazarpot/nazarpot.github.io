@@ -3,59 +3,132 @@
 @plugin '@tailwindcss/typography';*/
 
 :root {
-    --color-bg: #fbfbff;
+    --color-bg: #fbfbef;
     --color-bg-dark: #121212;
     --color-text: #121212;
-    --color-text-dark: #fbfbff;
+    --color-text-dark: #fbfbef;
     --color-primary: #dea54b;
     --color-blue: #33658a;
     --color-green: #59c9a5;
     --color-red: #ad343e;
 
-    --font-size-banner: 700%
+    /*
+        roseda = green
+        flame = orange
+        myrtle = blue
+        persian = red
+     */
+    --color-roseda: #748b75;
+    --color-flame: #dc602e;
+    --color-myrtle: #426b69;
+    --color-persian: #e74c3c;
+
+    --font-size-banner: 700%;
 }
 
 body {
-    background-color: var(--color-bg);
-    font-family: 'Playfair Display', "Helvetica", serif;
+    background-color: var(--color-bg-dark);
+    font-family: "Helvetica", sans-serif;
+    color: var(--color-text-dark);
+
+    padding-top: 4rem;
 }
 
 nav {
     padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 
-    border-bottom: 0.5rem solid var(--color-green);
-}
-
-#banner {
-    border-bottom: 0.5rem solid var(--color-green);
-
     background-color: var(--color-bg);
     color: var(--color-text);
 
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: var(--color-flame);
+}
+
+footer {
+    background-color: #fbfbef;
+    display: flex;
+    justify-content: center;
+}
+
+#banner {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-dark);
+
     font-size: var(--font-size-banner);
-    font-family: 'Baskerville', serif;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
 
     padding-top: 7%;
-    padding-bottom: 8%;
+    padding-bottom: 7%;
+}
+
+#description {
+    text-align: center;
+    font-size: 150%;
 }
 
 #contacts {
     padding: 4em;
     display: flex;
+    gap: 10em;
     align-content: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .contact {
-    padding: 1rem 2rem 1rem 2rem;
-    margin: 0 7rem 0 7rem;
-
+    flex: 1;
+    padding: 1rem 1rem 1rem 1rem;
+    text-align: center;
     border-radius: 10px;
 
-    background-color: var(--color-primary);
+    background-color: var(--color-flame);
 }
 
 .contact:hover {
-    background-color: var(--color-blue);
+    background-color: var(--color-myrtle);
     color: var(--color-text-dark);
+}
+
+#contact-page {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+#resume-page {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+#resume-download {
+    padding: 1rem 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#resume-download-btn {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+
+    border-radius: 10px;
+    background-color: var(--color-flame);
+}
+
+#resume-download-btn:hover {
+    background-color: var(--color-myrtle);
+}
+
+#resume {
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+#education {
+    display: flex;
+    justify-content: space-around;
 }

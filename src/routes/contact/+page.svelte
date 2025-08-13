@@ -2,8 +2,6 @@
     <title>Contact Me</title>
 </svelte:head>
 
-<h2>Contact Me</h2>
-
 <script>
     import emailjs from '@emailjs/browser';
 
@@ -15,6 +13,8 @@
             .then(
                 () => {
                     console.log('SUCCESS!');
+                    document.getElementById("success-message").style.display = "block";
+                    document.getElementById("contact-form").reset();
                 },
                 (error) => {
                     console.log('FAILED...', error.text);
@@ -23,67 +23,104 @@
     };
 </script>
 
-<div id="contact-form">
-    <form on:submit|preventDefault={sendEmail}>
+<div id="contact-page">
+    <h2 class="text-3xl">Contact Me</h2>
+
+    <p id="success-message">Success! An email has been sent.</p>
+        <form id="contact-form" class="text-lg" on:submit|preventDefault={sendEmail}>
             <label>
                 Name
-                <input type="text" name="user_name" required>
+                <input class="contact-input" type="text" name="name" required>
             </label>
             <label>
                 Email
-                <input type="email" name="user_email" required>
+                <input class="contact-input" type="email" name="email" required>
             </label>
             <label>
                 Message
-                <textarea name="message" rows="10" cols="50" required></textarea>
+                <textarea class="contact-input" name="message" rows="10" cols="50" required></textarea>
             </label>
-            <input id="submit-button" type="submit" value="Send">
-    </form>
+            <input id="submit-button" type="submit" value="Send" class="text-xl">
+        </form>
 </div>
 
 
+
 <style>
+    body {
+        background-color: var(--color-bg);
+        color: var(--color-text);
+    }
+
     h2 {
-        font-size: 200%;
-        margin-left: 3rem;
+        margin-left: 2rem;
     }
 
     #contact-form {
         padding: 1rem;
         margin: auto 2rem;
+
+        justify-content: center;
+    }
+
+    #success-message {
+        display: none;
+        padding: 1rem;
+        margin: auto 4rem;
+
+        color: var(--color-roseda);
     }
 
     form {
-        display: table;
+        display: flex;
+        flex-direction: column;
+        max-width: 50%;
     }
 
     label {
         padding: 1rem;
-        display: table-row;
     }
 
     input {
-        display: table-cell;
         margin-bottom: 1rem;
 
         border: 1px solid black;
         border-radius: 10px;
+
+        width: 80%;
+        text-align: left;
+        float: right;
+    }
+
+    input:user-invalid {
+        border-color: var(--color-persian);
     }
 
     textarea {
-        display: table-cell;
-
         border: 1px solid black;
         border-radius: 10px;
+
+        width: 80%;
+        float: right;
+    }
+
+    textarea:user-invalid {
+        border-color: var(--color-persian);
     }
 
     #submit-button {
-        margin: 1rem;
-        padding: 0.5rem 1rem 0.5rem 1rem;
-        background-color: var(--color-primary);
+        margin: 1rem 1rem 1rem 14rem;
+        padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+        background-color: var(--color-flame);
 
         border-radius: 10px;
 
+        max-width: 50%;
+        text-align: center;
+    }
+
+    #submit-button:hover {
+        background-color: var(--color-bg);
     }
 
 </style>
