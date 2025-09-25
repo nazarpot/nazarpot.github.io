@@ -6,11 +6,12 @@
 
 </script>
 
-<!--<nav class="flex flex-row items-center">
+<nav class="flex flex-row items-center">
     <a class="nav-link" href="/">
         <img src="/monogram.png" alt="logo" style="max-width: 50px"/>
     </a>
-</nav>-->
+    <a class="nav-link" href="/projects/montyHallSim">Monty Hall Sim</a>
+</nav>
 
 <main class="main">
     {@render children()}
