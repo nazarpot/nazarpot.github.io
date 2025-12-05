@@ -15,8 +15,8 @@
         let stayWinRate = (result[0]/iterations) * 100;
         let switchWinRate = (result[1]/iterations) * 100;
 
-        document.getElementById("stay-win-rate").textContent = "\t" + String(stayWinRate) + "%";
-        document.getElementById("switch-win-rate").textContent = "\t" + String(switchWinRate) + "%";
+        document.getElementById("stay-win-rate").textContent = "\t" + String(stayWinRate.toFixed(2)) + "%";
+        document.getElementById("switch-win-rate").textContent = "\t" + String(switchWinRate.toFixed(2)) + "%";
 
     }
 </script>

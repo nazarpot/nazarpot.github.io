@@ -11,6 +11,7 @@
         <img src="/monogram.png" alt="logo" style="max-width: 50px"/>
     </a>
     <a class="nav-link" href="/projects/montyHallSim">Monty Hall Sim</a>
+    <a class="nav-link" href="/arcade/memoryCards">Memory Cards Game</a>
 </nav>
 
 <main class="main">
