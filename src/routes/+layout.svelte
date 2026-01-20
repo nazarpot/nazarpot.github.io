@@ -12,6 +12,7 @@
     </a>
     <a class="nav-link" href="/projects/montyHallSim">Monty Hall Sim</a>
     <a class="nav-link" href="/arcade/memoryCards">Memory Cards Game</a>
+    <a class="nav-link" href="/projects/yt-dlp-gui">YouTube MP3 Downloader</a>
 </nav>
 
 <main class="main">
